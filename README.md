@@ -87,27 +87,51 @@ This provides a human-in-the-loop review layer for high-stakes domains such as h
 
 ## 📸 Screenshots
 
-### Dashboard
+### 🏠 Dashboard
 
-Upload a research paper and launch multi-agent analysis.
+The main interface where users upload research papers in PDF format and launch the multi-agent analysis workflow. The system automatically extracts text and prepares it for agent-based processing.
 
-![Main Dashboard](Screenshots/Dashboard.png)
-
----
-
-### Summary Agent
-
-Generates beginner-friendly summaries and explains the research problem.
-
-![Summary Agent](Screenshots/Summary_Agent.png)
+<img src="Screenshots/Dashboard.png" width="900">
 
 ---
 
-### Safety Review Agent
+### 📄 Summary Agent
 
-Performs safety evaluation and highlights potential risks.
+Generates a beginner-friendly summary of the research paper, explaining the problem statement, objectives, key findings, and practical applications in an easy-to-understand format.
 
-![Safety Review Agent](Screenshots/Safety_Review_Agent.png)
+<img src="Screenshots/Summary_Agent.png" width="900">
+
+---
+
+### 🔬 Methodology Agent
+
+Analyzes the research methodology and identifies datasets, preprocessing techniques, model architectures, training strategies, and evaluation procedures used in the study.
+
+<img src="Screenshots/Methodology_Agent.png" width="900">
+
+---
+
+### 📊 Evaluation Agent
+
+Reviews experimental results and performance metrics, highlighting strengths, weaknesses, comparisons with baseline methods, and overall research effectiveness.
+
+<img src="Screenshots/Evaluation_Agent.png" width="900">
+
+---
+
+### 🎓 Research Mentor Agent
+
+Acts as an academic mentor by providing future research directions, thesis ideas, improvement suggestions, publication opportunities, and potential extensions of the work.
+
+<img src="Screenshots/Research_Mentor_Agent.png" width="900">
+
+---
+
+### 🛡️ Safety Review Agent
+
+Performs safety and trustworthiness checks on AI-generated content. The agent identifies potential risks, missing disclaimers, overconfident claims, and areas requiring human review before deployment.
+
+<img src="Screenshots/Safety_Review_Agent.png" width="900">
 
 ---
 
