@@ -2,103 +2,138 @@
 
 ## A Multi-Agent Research Paper Assistant
 
-ResearchMate AI is a multi-agent AI system designed to help students, researchers, and academics analyze research papers efficiently. The application allows users to upload a PDF research paper and automatically generates comprehensive insights through multiple specialized AI agents.
+ResearchMate AI is an intelligent multi-agent system designed to help students, researchers, and academics analyze scientific research papers automatically.
 
-Built as part of the **Google × Kaggle 5-Day AI Agents: Intensive Vibe Coding Course 2026 Capstone Project**, this project demonstrates the practical application of agent-based systems, agent skills, safety evaluation, and human-in-the-loop AI workflows.
+The platform extracts text from uploaded PDF papers and coordinates multiple specialized AI agents to generate comprehensive insights including summaries, methodology explanations, evaluation reports, future research directions, and safety reviews.
+
+Built as a capstone project for the **Google × Kaggle 5-Day AI Agents: Intensive Vibe Coding Course 2026**.
 
 ---
 
 ## 🚀 Features
 
-### 🧠 Multi-Agent Research Analysis
+### 📄 PDF Research Paper Analysis
 
-ResearchMate AI employs multiple specialized AI agents working together:
+* Upload any academic research paper in PDF format
+* Automatic text extraction
+* Support for large research documents
 
-| Agent                 | Responsibility                                                         |
-| --------------------- | ---------------------------------------------------------------------- |
-| Summary Agent         | Generates an easy-to-understand summary of the paper                   |
-| Methodology Agent     | Extracts datasets, preprocessing, models, and experimental setup       |
-| Evaluation Agent      | Analyzes metrics, results, comparisons, and limitations                |
-| Research Mentor Agent | Suggests future work, research gaps, and improvement opportunities     |
-| Safety Review Agent   | Evaluates generated outputs for unsupported claims and potential risks |
+### 🤖 Multi-Agent Architecture
 
----
+ResearchMate AI uses five specialized AI agents:
 
-## 🎯 Problem Statement
-
-Researchers often spend significant time reading and analyzing academic papers before understanding:
-
-* Research objectives
-* Methodology
-* Experimental design
-* Results and findings
-* Future research opportunities
-
-ResearchMate AI accelerates this process by providing structured, agent-driven analysis while maintaining human oversight.
+| Agent                 | Responsibility                                             |
+| --------------------- | ---------------------------------------------------------- |
+| Summary Agent         | Generates beginner-friendly summaries                      |
+| Methodology Agent     | Explains research methods and workflows                    |
+| Evaluation Agent      | Reviews strengths, weaknesses, and limitations             |
+| Research Mentor Agent | Suggests future research directions and project ideas      |
+| Safety Review Agent   | Detects risks, speculative claims, and missing disclaimers |
 
 ---
 
-## 🏗 System Architecture
+## 🧠 Agent Workflow
 
 ```text
 Research Paper PDF
-         │
-         ▼
-   PDF Text Extraction
-         │
-         ▼
- ┌─────────────────────┐
- │   Summary Agent     │
- └─────────────────────┘
-         │
-         ▼
- ┌─────────────────────┐
- │ Methodology Agent   │
- └─────────────────────┘
-         │
-         ▼
- ┌─────────────────────┐
- │ Evaluation Agent    │
- └─────────────────────┘
-         │
-         ▼
- ┌─────────────────────┐
- │ Research Mentor     │
- │ Agent               │
- └─────────────────────┘
-         │
-         ▼
- ┌─────────────────────┐
- │ Safety Review Agent │
- └─────────────────────┘
-         │
-         ▼
-   Human Review
+        │
+        ▼
+Text Extraction Layer
+        │
+        ▼
+┌─────────────────────┐
+│ Summary Agent       │
+└─────────────────────┘
+        │
+        ▼
+┌─────────────────────┐
+│ Methodology Agent   │
+└─────────────────────┘
+        │
+        ▼
+┌─────────────────────┐
+│ Evaluation Agent    │
+└─────────────────────┘
+        │
+        ▼
+┌─────────────────────┐
+│ Research Mentor     │
+└─────────────────────┘
+        │
+        ▼
+┌─────────────────────┐
+│ Safety Review Agent │
+└─────────────────────┘
+        │
+        ▼
+Comprehensive Analysis Report
 ```
 
 ---
 
-## 🛠 Technologies Used
+## 🛡️ Safety & Human-in-the-Loop Review
+
+ResearchMate AI includes a dedicated Safety Review Agent that evaluates generated content for:
+
+* Medical misinformation risks
+* Overstated conclusions
+* Unsupported claims
+* Missing disclaimers
+* Hallucination-prone recommendations
+
+This provides a human-in-the-loop review layer for high-stakes domains such as healthcare and biomedical research.
+
+---
+
+## 📸 Screenshots
+
+### Dashboard
+
+Upload a research paper and launch multi-agent analysis.
+
+![Main Dashboard](Screenshots/Dashboard.png)
+
+---
+
+### Summary Agent
+
+Generates beginner-friendly summaries and explains the research problem.
+
+![Summary Agent](Screenshots/Summary Agent.png)
+
+---
+
+### Safety Review Agent
+
+Performs safety evaluation and highlights potential risks.
+
+![Safety Review Agent](Screenshots/Safety Review Agent.png)
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
 
 * Streamlit
 
-### AI Models
-
-* Google Gemini 3.5 Flash
-
 ### Backend
 
 * Python
 
+### AI Model
+
+* Google Gemini API
+
 ### PDF Processing
 
-* PyPDF
+* PyPDF2
 
-### Environment Management
+### Development Tools
 
-* python-dotenv
+* Git
+* GitHub
+* VS Code
 
 ---
 
@@ -106,8 +141,6 @@ Research Paper PDF
 
 ```text
 ResearchMate-AI/
-│
-├── app.py
 │
 ├── agents/
 │   ├── summary_agent.py
@@ -126,64 +159,11 @@ ResearchMate-AI/
 ├── utils/
 │   └── pdf_reader.py
 │
+├── app.py
 ├── requirements.txt
 ├── .env.example
 └── README.md
 ```
-
----
-
-## 🔐 Security & Safety Features
-
-ResearchMate AI incorporates concepts from Google's Agent Security and Evaluation framework:
-
-### Safety Review Agent
-
-The Safety Review Agent automatically checks for:
-
-* Unsupported claims
-* Hallucinated information
-* Overstated conclusions
-* Unsafe recommendations
-* Misinterpretation of research findings
-
-### Human-in-the-Loop
-
-All generated outputs are intended to be reviewed by human researchers before use in:
-
-* Academic publications
-* Clinical decision-making
-* Research proposals
-* Educational materials
-
----
-
-## 🧩 Agent Skills
-
-The project uses structured agent skills inspired by Google's Agent Skills framework.
-
-Implemented skills include:
-
-* Summary Skill
-* Methodology Skill
-* Evaluation Skill
-* Research Mentor Skill
-* Safety Skill
-
-These skills allow agents to perform specialized tasks while maintaining modularity and scalability.
-
----
-
-## 💡 Example Workflow
-
-1. Upload a research paper PDF.
-2. Extract text automatically.
-3. Generate a structured summary.
-4. Extract methodology and datasets.
-5. Analyze evaluation metrics and results.
-6. Generate future research directions.
-7. Run safety evaluation.
-8. Review outputs before use.
 
 ---
 
@@ -207,7 +187,7 @@ pip install -r requirements.txt
 Create a `.env` file:
 
 ```env
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
 ```
 
 ### Run Application
@@ -216,57 +196,46 @@ GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 streamlit run app.py
 ```
 
-or
+---
 
-```bash
-python3 -m streamlit run app.py
-```
+## 💡 Example Use Cases
+
+* Literature review assistance
+* Research paper understanding
+* Thesis preparation
+* Research gap identification
+* Academic project planning
+* Scientific paper evaluation
+* Medical paper safety review
 
 ---
 
-## 📸 Screenshots
+## 🎯 Kaggle AI Agents Capstone Concepts Demonstrated
 
-### Home Page
+This project demonstrates multiple concepts from the Google × Kaggle AI Agents Intensive:
 
-Upload research papers through a simple user interface.
+✅ Multi-Agent Systems
 
-### Multi-Agent Analysis
+✅ Agent Skills
 
-View outputs generated by each specialized agent.
+✅ Security & Safety Evaluation
 
-### Safety Review
+✅ Human-in-the-Loop Review
 
-Receive safety assessments and recommendations before using generated content.
-
----
-
-## 🎓 Learning Outcomes
-
-This project demonstrates concepts learned during:
-
-**Google × Kaggle 5-Day AI Agents Intensive Vibe Coding Course 2026**
-
-Implemented concepts:
-
-* Multi-Agent Systems
-* Agent Skills
-* Human-in-the-Loop Design
-* AI Safety Evaluation
-* Vibe Coding
-* Agent-Oriented Software Development
+✅ Vibe Coding Workflow
 
 ---
 
-## 🚀 Future Improvements
+## 🔮 Future Improvements
 
-* Research paper metadata extraction
-* Citation generation
-* Literature review generation
-* PDF report export
-* Research trend analysis
-* Multi-paper comparison
-* Cloud deployment
-* Agent memory and retrieval
+* MCP Server Integration
+* ADK Agent Orchestration
+* Citation Verification Agent
+* ArXiv/PubMed Search Agent
+* Research Gap Detection Agent
+* Paper-to-Presentation Generator
+* Automatic Literature Review Builder
+* Multi-PDF Comparative Analysis
 
 ---
 
@@ -274,7 +243,7 @@ Implemented concepts:
 
 **Rinvi Jaman Riti**
 
-Department of Computer Science and Engineering
+B.Sc. in Computer Science & Engineering
 Daffodil International University
 
 GitHub: https://github.com/rinviriti
@@ -283,4 +252,4 @@ GitHub: https://github.com/rinviriti
 
 ## 📜 License
 
-This project is released for educational and research purposes.
+This project is released under the MIT License.
