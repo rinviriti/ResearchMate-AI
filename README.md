@@ -99,7 +99,7 @@ Upload a research paper and launch multi-agent analysis.
 
 Generates beginner-friendly summaries and explains the research problem.
 
-![Summary Agent](Screenshots/Summary Agent.png)
+![Summary Agent](Screenshots/Summary_Agent.png)
 
 ---
 
@@ -107,7 +107,7 @@ Generates beginner-friendly summaries and explains the research problem.
 
 Performs safety evaluation and highlights potential risks.
 
-![Safety Review Agent](Screenshots/Safety Review Agent.png)
+![Safety Review Agent](Screenshots/Safety_Review_Agent.png)
 
 ---
 
