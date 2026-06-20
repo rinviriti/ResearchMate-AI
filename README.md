@@ -34,41 +34,34 @@ ResearchMate AI uses five specialized AI agents:
 
 ## 🧠 Agent Workflow
 
-```text
-Research Paper PDF
-        │
-        ▼
-Text Extraction Layer
-        │
-        ▼
-┌─────────────────────┐
-│ Summary Agent       │
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│ Methodology Agent   │
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│ Evaluation Agent    │
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│ Research Mentor     │
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│ Safety Review Agent │
-└─────────────────────┘
-        │
-        ▼
-Comprehensive Analysis Report
-```
-
+User
+  │
+  ▼
+PDF Upload
+  │
+  ▼
+PDF Extraction Tool
+  │
+  ▼
+Coordinator Agent
+  │
+  ├── Summary Agent
+  │     └── Generates beginner-friendly paper summary
+  │
+  ├── Methodology Agent
+  │     └── Extracts dataset, model, preprocessing, and methods
+  │
+  ├── Evaluation Agent
+  │     └── Reviews metrics, results, limitations, and comparisons
+  │
+  ├── Research Mentor Agent
+  │     └── Suggests research gaps, future work, and improvements
+  │
+  └── Safety Review Agent
+        └── Checks unsupported claims, risks, and missing disclaimers
+  │
+  ▼
+Final Research Report
 ---
 
 ## 🛡️ Safety & Human-in-the-Loop Review
