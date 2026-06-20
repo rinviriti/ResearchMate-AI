@@ -22,29 +22,29 @@ Built as a capstone project for the **Google × Kaggle AI Agents Intensive: Vibe
 
 ---
 
-## 🧠 Multi-Agent Architecture
+## 🧠 Agent Workflow
 
-```text
-User
- │
- ▼
-PDF Upload
- │
- ▼
-PDF Extraction
- │
- ▼
-Coordinator
- │
- ├── 📄 Summary Agent
- ├── 🔬 Methodology Agent
- ├── 📊 Evaluation Agent
- ├── 🎓 Research Mentor Agent
- └── 🛡️ Safety Review Agent
- │
- ▼
-Final Research Report
-```
+```mermaid
+flowchart LR
+
+A[User Uploads PDF]
+--> B[PDF Extraction]
+
+B --> C[Coordinator]
+
+C --> D[Summary Agent]
+C --> E[Methodology Agent]
+C --> F[Evaluation Agent]
+C --> G[Research Mentor Agent]
+C --> H[Safety Review Agent]
+
+D --> I[Final Report]
+E --> I
+F --> I
+G --> I
+H --> I
+
+I --> J[Download PDF / Markdown]
 
 ---
 
