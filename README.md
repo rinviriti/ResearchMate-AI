@@ -26,25 +26,23 @@ Built as a capstone project for the **Google × Kaggle AI Agents Intensive: Vibe
 
 ```mermaid
 flowchart LR
+    A["User Uploads PDF"] --> B["PDF Extraction"]
+    B --> C["Coordinator"]
 
-A[User Uploads PDF]
---> B[PDF Extraction]
+    C --> D["Summary Agent"]
+    C --> E["Methodology Agent"]
+    C --> F["Evaluation Agent"]
+    C --> G["Research Mentor Agent"]
+    C --> H["Safety Review Agent"]
 
-B --> C[Coordinator]
+    D --> I["Final Report"]
+    E --> I
+    F --> I
+    G --> I
+    H --> I
 
-C --> D[Summary Agent]
-C --> E[Methodology Agent]
-C --> F[Evaluation Agent]
-C --> G[Research Mentor Agent]
-C --> H[Safety Review Agent]
-
-D --> I[Final Report]
-E --> I
-F --> I
-G --> I
-H --> I
-
-I --> J[Download PDF / Markdown]
+    I --> J["Download PDF / Markdown"]
+```
 
 ---
 
