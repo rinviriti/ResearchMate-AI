@@ -67,13 +67,13 @@ I --> J[Export PDF / Markdown]
 
 Main interface for uploading research papers and launching multi-agent analysis.
 
-![Dashboard](Screenshots/Dashboard2.0.png)
+![Dashboard](Screenshots/Dashboard1.0.png)
 
 ### Agent System Overview
 
 Visualization of the specialized AI agents that collaboratively analyze uploaded papers.
 
-![Agent System](Screenshots/Agent_System.png)
+![Agent System](Screenshots/Dashboard2.0.png)
 
 ### Final Report Export
 
