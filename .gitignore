@@ -1,3 +1,21 @@
-.env
-.venv/
+
 test_gemini.py
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
+
+# Streamlit
+.streamlit/secrets.toml
+
+# VS Code
+.vscode/
